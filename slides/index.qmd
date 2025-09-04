@@ -1,0 +1,43 @@
+---
+title: "Your Slide Deck Title"
+subtitle: "Optional subtitle"
+author: "Your Name"
+date: today
+format:
+  revealjs:
+    incremental: false
+    preview-links: auto
+    chalkboard: true
+    slide-number: true
+    # logo: path/to/logo.png  # uncomment and set if you have a logo
+---
+
+## Welcome
+
+Introduce your workshop or talk here.
+
+---
+
+## Agenda
+
+- Topic 1
+- Topic 2
+- Topic 3
+
+---
+
+## Content slide
+
+Add your content here. Use code blocks, images, and lists as needed.
+
+```python
+print("Hello, slides!")
+```
+
+---
+
+## Thank you
+
+Contact: your.email@example.com
+
+
