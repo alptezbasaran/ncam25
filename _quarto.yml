@@ -1,5 +1,7 @@
 project:
   type: default
+  resources:
+    - assets/**
 
 format:
   revealjs:
@@ -9,6 +11,6 @@ format:
     background-transition: fade
     code-overflow: wrap
     toc: false
-    footer: "Data Science Services"
+    footer: "North Carolina Astronomers' Meeting 2025"
 
 editor: visual

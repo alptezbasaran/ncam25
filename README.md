@@ -1,32 +1,60 @@
-# Quarto Slides Template
+# Spiral Graph: Cluster Buster
 
-This folder contains a minimal Quarto + Reveal.js slide deck and a GitHub Actions workflow to publish to GitHub Pages.
+**Pairing Citizen Scientists with A.I. to Identify Individual Arms in Spiral Galaxies**
 
-## Use this template
+A Quarto + Reveal.js presentation for the North Carolina Astronomers' Meeting 2025.
 
-1. Copy the contents of this `template/` folder into the root of your new repository (or move the whole folder and rename it as your repo root).
-2. Push to `main` on GitHub.
-3. The included workflow publishes to the `gh-pages` branch automatically. In your GitHub repo settings, set Pages source to `Deploy from a branch` → `gh-pages`.
+## Authors
 
-## Files
+- **Alp Tezbasaran** - alptezbasaran@ncsu.edu
+- **Dr. Patrick Treuthardt** - patrick.treuthardt@naturalsciences.org  
+- **Ian Hewitt** - ihewitt@coastal.edu
 
-- `_quarto.yml` — Quarto project config (applies the NCSU theme and reveal options)
-- `slides/index.qmd` — Starter slide deck
-- `slides/theme/ncsu.scss` — Theme stylesheet
-- `.github/workflows/deploy-page.yml` — GitHub Pages deployment workflow
-- `.gitignore` — Ignore Quarto build artifacts and generated HTML
+## Project Structure
 
-## Local preview
+- `_quarto.yml` — Quarto project configuration with NCSU theme and reveal options
+- `slides/index.qmd` — Main slide deck with presentation content
+- `slides/theme/ncsu.scss` — Custom NCSU-themed stylesheet
+- `assets/` — Images and logos (NCSU, NCMNS, Coastal Carolina)
+- `Dockerfile` — Docker configuration for Quarto environment
+- `compose.yaml` — Docker Compose setup
+- `.gitignore` — Ignores build artifacts and generated files
 
-Install Quarto: https://quarto.org/docs/get-started/
+## Running with Docker
 
-Then from the project root:
+This project includes Docker setup for consistent rendering across different environments.
 
-```bash
-quarto preview
-# or
-quarto render && open slides/index.html
-```
+### Prerequisites
+
+- Docker and Docker Compose installed on your system
+
+### Build and Run
+
+1. **Start the Docker container:**
+   ```bash
+   docker compose up -d
+   ```
+
+2. **Render the slides:**
+   ```bash
+   docker compose exec slides bash -lc "quarto render slides/index.qmd"
+   ```
+
+3. **View the slides:**
+   - Open `slides/index.html` in your browser
+   - Or serve locally with: `docker compose exec slides bash -lc "quarto preview slides/index.qmd"`
+
+### Alternative: Local Development
+
+If you prefer to run Quarto locally:
+
+1. Install Quarto: https://quarto.org/docs/get-started/
+2. From the project root:
+   ```bash
+   quarto preview slides/index.qmd
+   # or
+   quarto render slides/index.qmd && open slides/index.html
+   ```
 
 ## Customize
 

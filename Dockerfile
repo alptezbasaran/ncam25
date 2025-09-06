@@ -10,11 +10,9 @@ RUN apt-get update -y && apt-get install -y --no-install-recommends \
 WORKDIR /project
 
 # Preinstall python deps to leverage Docker cache
-COPY requirements.txt requirements.txt
 RUN python3 -m venv .venv \
     && . .venv/bin/activate \
-    && pip install --upgrade pip \
-    && pip install -r requirements.txt || true
+    && pip install --upgrade pip
 
 # Copy project last to maximize cache
 COPY . .

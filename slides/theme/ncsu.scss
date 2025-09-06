@@ -38,7 +38,7 @@ $blockquote-border-color: $ncsu-red;
   h1 {
     letter-spacing: 0.2px;
     border-top: 6px solid $ncsu-red;
-    padding-top: 42px;
+    padding-top: 48px;
   }
 
   h2, h3, h4 {
@@ -83,8 +83,63 @@ $blockquote-border-color: $ncsu-red;
 
   .title-slide {
     background: $ncsu-white;
-    .title { color: $ncsu-red; }
-    .subtitle { color: $ncsu-dk-gray; }
+    position: relative;
+  }
+  
+  // Move title slide content down using transform
+  .slides section:first-child {
+    transform: translateY(20px) !important;
+  }
+
+  
+  // More specific selectors for title slide text
+  .title-slide h1,
+  .title-slide .title,
+  .slides section:first-child h1 {
+    color: $ncsu-dk-gray !important;
+    font-size: 4.5rem !important; // Adjust title size
+  }
+  
+  .title-slide h2,
+  .title-slide .subtitle,
+  .slides section:first-child h2 {
+    color: $ncsu-dk-gray !important;
+    font-size: 1.8rem !important; // Adjust subtitle size
+  }
+  
+  // Target the actual Quarto-generated author structure
+  .quarto-title-authors,
+  .quarto-title-author,
+  .quarto-title-author-name {
+    font-size: 1.7rem !important; // Smaller author size
+  }
+  
+  // Make email addresses smaller
+  .quarto-title-author-email {
+    font-size: 1.3rem !important; // Smaller email size
+    color: $ncsu-md-gray !important; // Slightly muted color
+  }
+  
+  .title-slide .date,
+  .slides section:first-child .date {
+    font-size: 2.0rem !important; // Adjust date size
+  }
+  // Add logos to the title slide using ::before pseudo-element
+  .slides section:first-child::before {
+    content: "";
+    position: absolute;
+    padding-top: 50px;
+    left: 50%;
+    top: -125px;
+    transform: translateX(-50%);
+    width: 900px;
+    height: 350px;
+    pointer-events: none;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: left top, center top, right top;
+    background-size: auto 78px, auto 78px, auto 78px;
+    background-image: url("/assets/logo_ncsu.svg"), url("/assets/logo_ncmns.png"), url("/assets/logo_coastal.png");
+    z-index: 9999 !important;
   }
 }
 
@@ -107,7 +162,7 @@ body[data-workshop]::before {
 
 // Increase Reveal slide logo size (affects format.revealjs.logo)
 .reveal .slide-logo {
-  height: 256px !important; // enforce override of default reveal size
+  height: 4000px !important; // enforce override of default reveal size
   width: auto !important;
 }
 

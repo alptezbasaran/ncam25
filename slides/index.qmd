@@ -1,7 +1,13 @@
 ---
-title: "Your Slide Deck Title"
-subtitle: "Optional subtitle"
-author: "Your Name"
+title: "Spiral Graph: Cluster Buster"
+subtitle: "Pairing Citizen Scientists with A.I. to Identify Individual Arms in Spiral Galaxies"
+author: 
+  - name: "Alp Tezbasaran"
+    email: "alptezbasaran@ncsu.edu"
+  - name: "Dr. Patrick Treuthardt"
+    email: "patrick.treuthardt@naturalsciences.org"
+  - name: "Ian Hewitt"
+    email: "ihewitt@coastal.edu"
 date: today
 format:
   revealjs:
@@ -9,7 +15,7 @@ format:
     preview-links: auto
     chalkboard: true
     slide-number: true
-    # logo: path/to/logo.png  # uncomment and set if you have a logo
+#    logo: ../assets/logo_ncmns.png  # uncomment and set if you have a logo
 ---
 
 ## Welcome

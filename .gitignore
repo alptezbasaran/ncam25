@@ -8,6 +8,7 @@ _freeze/
 
 # Reveal/Quarto generated HTML from slides
 slides/*.html
+slides/index_files/
 
 # Python
 __pycache__/
@@ -32,4 +33,16 @@ Thumbs.db
 .vscode/
 *.log
 
+# Docker
+.dockerignore
 
+# Temporary files
+*.tmp
+*.temp
+*~
+
+# Backup files
+*.bak
+*.backup
+
+/.quarto/
