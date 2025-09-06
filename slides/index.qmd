@@ -15,8 +15,6 @@ format:
     preview-links: auto
     chalkboard: true
     slide-number: true
-resources:
-  - assets/**
 ---
 
 ## Welcome

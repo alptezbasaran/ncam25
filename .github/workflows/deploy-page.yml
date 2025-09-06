@@ -6,6 +6,7 @@ on:
     paths:
       - "slides/**"
       - "_quarto.yml"
+      - "assets/**"
   workflow_dispatch:
 
 permissions:
@@ -41,23 +42,13 @@ jobs:
         with:
           version: 1.6.40
 
-      - name: Render slides
-        run: |
-          quarto render slides/index.qmd --to revealjs
+      - name: Render Quarto Project
+        run: quarto render
 
-      - name: Include assets in Pages artifact
-        run: |
-          mkdir -p slides/assets
-          rsync -av assets/ slides/assets/
-
-      - name: Rewrite logo path to use slides-local assets
-        run: |
-          sed -i 's|src="\../assets/|src="assets/|g' slides/index.html
-
-      - name: Upload Pages artifact (slides as site root)
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: slides
+          path: docs
 
   deploy:
     needs: build
