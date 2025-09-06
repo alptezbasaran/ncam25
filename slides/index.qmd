@@ -15,7 +15,8 @@ format:
     preview-links: auto
     chalkboard: true
     slide-number: true
-#    logo: ../assets/logo_ncmns.png  # uncomment and set if you have a logo
+resources:
+  - assets/**
 ---
 
 ## Welcome
