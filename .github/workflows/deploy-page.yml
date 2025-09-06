@@ -50,6 +50,13 @@ jobs:
           mkdir -p slides/assets
           rsync -av assets/ slides/assets/
 
+      - name: Copy assets next to Reveal CSS
+        run: |
+          mkdir -p slides/index_files/libs/revealjs/assets
+          mkdir -p slides/index_files/libs/revealjs/dist/assets
+          rsync -av assets/ slides/index_files/libs/revealjs/assets/
+          rsync -av assets/ slides/index_files/libs/revealjs/dist/assets/
+
       - name: Rewrite logo path to use slides-local assets
         run: |
           sed -i 's|src="\../assets/|src="assets/|g' slides/index.html

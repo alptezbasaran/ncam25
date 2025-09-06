@@ -1,8 +1,5 @@
 project:
-  type: website
-  output-dir: docs
-  resources:
-    - assets/**
+  type: default
 
 format:
   revealjs:
@@ -12,6 +9,6 @@ format:
     background-transition: fade
     code-overflow: wrap
     toc: false
-    footer: "North Carolina Astronomers' Meeting 2025"
+    footer: "NCAM 2025"
 
 editor: visual

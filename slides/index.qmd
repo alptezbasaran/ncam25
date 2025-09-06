@@ -17,7 +17,7 @@ format:
     slide-number: true
 ---
 
-## Welcome
+## We are deploying a new Citizen Science Project
 
 Introduce your workshop or talk here.
 
