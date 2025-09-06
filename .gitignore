@@ -1,0 +1,35 @@
+# Quarto build artifacts
+_site/
+_freeze/
+.quarto/
+.cache/
+.sass-cache/
+.ipynb_checkpoints/
+
+# Reveal/Quarto generated HTML from slides
+slides/*.html
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.eggs/
+
+# Environments
+.env
+.env.local
+.envrc
+
+# Node
+node_modules/
+
+# OS / Editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log
+
+
