@@ -263,6 +263,37 @@ body[data-workshop]::before {
   line-height: 1.1 !important;
 }
 
+// Thank you slide styling
+.reveal section.thank-you-slide {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center;
+  height: 100%;
+}
+.reveal section.thank-you-slide h2 {
+  font-size: 6.5rem !important;
+  color: $ncsu-red !important;
+  border: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+// Inline thank you variant for placing on any slide
+.reveal .slides .thank-you-inline {
+  margin-top: 18px;
+  font-size: 7.0rem;
+  font-weight: 800;
+  text-align: left;
+}
+
+@media (max-width: 600px) {
+  .reveal .slides .thank-you-inline {
+    font-size: 3.2rem;
+    margin-top: 12px;
+  }
+}
+
 // Responsive tweaks
 @media (max-width: 1200px) {
   .reveal .team-grid { grid-template-columns: repeat(4, 1fr); }
@@ -284,7 +315,7 @@ body[data-workshop]::before {
     font-size: 0 !important; // hide original text without affecting layout
   }
   .reveal .footer.footer-default p::after {
-    content: "DSS";
+    content: "NCAM25";
     font-size: 0.9rem; // visible replacement
     font-weight: inherit;
   }

@@ -23,20 +23,15 @@ Introduce your workshop or talk here.
 
 ---
 
-## Agenda
-
-- Topic 1
-- Topic 2
-- Topic 3
+### How did we end up here?
 
 ---
 
-![Repository Overview](../assets/repo.png)
-
+### Spiral Graph
 
 ---
 
-## Content slide
+### Arm Clustering
 
 Add your content here. Use code blocks, images, and lists as needed.
 
@@ -46,8 +41,24 @@ print("Hello, slides!")
 
 ---
 
-## Thank you
+## Questions?
 
-Contact: your.email@example.com
+Link to Cluster Buster
+
+<a href="mailto:alptezbasaran@ncsu.edu">alptezbasaran@ncsu.edu</a>
+
+<p class="thank-you-inline">THANK YOU</p>
+
+::: hidden
+```{=html}
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const title = document.querySelector('.reveal .slides section .title, .reveal .slides section h1, .reveal .slides section h2');
+    const workshop = title ? title.textContent.trim() : 'Workshop';
+    document.body.setAttribute('data-workshop', workshop);
+  });
+</script>
+```
+:::
 
 
