@@ -45,10 +45,10 @@ jobs:
         run: |
           quarto render slides/index.qmd --to revealjs
 
-        - name: Include assets in Pages artifact
-          run: |
-            mkdir -p slides/assets
-            rsync -av assets/ slides/assets/
+      - name: Include assets in Pages artifact
+        run: |
+          mkdir -p slides/assets
+          rsync -av assets/ slides/assets/
 
       - name: Upload Pages artifact (slides as site root)
         uses: actions/upload-pages-artifact@v3
