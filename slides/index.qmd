@@ -32,6 +32,11 @@ Introduce your workshop or talk here.
 
 ---
 
+![Repository Overview](../assets/repo.png)
+
+
+---
+
 ## Content slide
 
 Add your content here. Use code blocks, images, and lists as needed.
