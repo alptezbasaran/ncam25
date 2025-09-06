@@ -49,10 +49,8 @@ jobs:
         run: |
           mkdir -p slides/assets
           rsync -av assets/ slides/assets/
-
-      - name: Rewrite logo path to use slides-local assets
-        run: |
-          sed -i 's|src="\../assets/|src="assets/|g' slides/index.html
+          # Also copy assets to the revealjs assets directory where the CSS expects them
+          rsync -av assets/ slides/index_files/libs/revealjs/dist/assets/
 
       - name: Upload Pages artifact (slides as site root)
         uses: actions/upload-pages-artifact@v3

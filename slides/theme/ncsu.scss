@@ -138,7 +138,7 @@ $blockquote-border-color: $ncsu-red;
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-position: left top, center top, right top;
     background-size: auto 78px, auto 78px, auto 78px;
-    background-image: url("/assets/logo_ncsu.svg"), url("/assets/logo_ncmns.png"), url("/assets/logo_coastal.png");
+    background-image: url("../../assets/logo_ncsu.svg"), url("../../assets/logo_ncmns.png"), url("../../assets/logo_coastal.png");
     z-index: 9999 !important;
   }
 }
