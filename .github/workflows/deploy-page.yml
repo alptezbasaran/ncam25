@@ -50,6 +50,10 @@ jobs:
           mkdir -p slides/assets
           rsync -av assets/ slides/assets/
 
+      - name: Rewrite logo path to use slides-local assets
+        run: |
+          sed -i 's|src="\../assets/|src="assets/|g' slides/index.html
+
       - name: Upload Pages artifact (slides as site root)
         uses: actions/upload-pages-artifact@v3
         with:
