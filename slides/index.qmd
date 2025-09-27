@@ -61,7 +61,7 @@ format:
 ### Arm Clustering
 
 <div style="text-align:center;">
-  <img src="../assets/algorithm.tif" alt="Arm Clustering Demo" style="width: 85%; height: auto;" />
+  <img src="../assets/algorithm.png" alt="Arm Clustering Demo" style="width: 85%; height: auto;" />
 </div>
 
 
@@ -164,7 +164,7 @@ body.no-logos .reveal .slide-logo { display: none !important; }
 ---
 
 ```{=html}
-<section data-background-iframe="fullscreen.html" data-background-interactive data-state="fsimg"></section>
+<section data-background-iframe="./fullscreen.html" data-background-interactive data-state="fsimg"></section>
 ```
 
 ---
